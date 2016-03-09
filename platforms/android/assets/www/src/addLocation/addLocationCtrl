@@ -6,19 +6,19 @@
 		.controller('addTripCtrl', addTripCtrl)
 		.directive('focusMe', focusMe);
 
-	function addTripCtrl($scope, $state, $ionicModal) {
+	function addTripCtrl($scope, $state) {
 		/* jshint validthis: true */
 		var vm = $scope;
 
 		vm.title = "New Trip";
 
 		//StatusBar.hide();
-		  $ionicModal.fromTemplateUrl('templates/modal.html', {
+
+		$ionicModal.fromTemplateUrl('templates/modal.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
   });
-	
 	}
 
 	function focusMe($timeout){
