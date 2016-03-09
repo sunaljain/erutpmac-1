@@ -1,0 +1,40 @@
+<ion-view view-title="Welcome" hide-nav-bar="true" class="login-screen">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+        <ion-slide class="box row row-center">
+            <div class="col col-center center slide">
+                <h3>Welcome to Campture</h3>
+                <p>Explore experiences and itineraries by travellers</p>
+                <img src="assets/img/introSlide1.png">
+            </div>
+        </ion-slide>
+        <ion-slide class="box row roe-center">
+            <div class="col col-center center slide">
+                <h3>Create your own timeline</h3>
+                <p>Upload precious moments of your journey</p>
+                <img src="assets/img/introSlide2.png">
+            </div>
+        </ion-slide>
+        <ion-slide class="box row roe-center">
+        	<div class="col col-center center slide">
+                <h3>Map trips effortlesly</h3>
+                <p>Tag locations to keep your family and friends updated</p>
+                <img src="assets/img/introSlide3.png">
+            </div>
+        </ion-slide>
+        <ion-slide class="box row roe-center">
+            <div class="col col-center center slide">
+                <h3>Beautiful Photo Naratives</h3>
+                <p>Write some words to go with your photos</p>
+                <img src="assets/img/introSlide4.png">
+            </div>
+        </ion-slide>
+    </ion-slide-box>
+    <ion-content scroll="false" class="login-box padding-left padding-right padding-bottom">
+        <div class="buttons padding-left padding-right">
+            <button class="button button-block fb-login padding-top padding-bottom" ng-click="login()"><i class="icon ion-social-facebook padding-right"></i> Sign in via Facebook</button>
+        </div>
+        <div class="buttons center padding-left padding-right">
+            <button class="button button-clear padding-left padding-right" ng-click="skip()">Skip</button>
+        </div>
+    </ion-content>
+</ion-view>

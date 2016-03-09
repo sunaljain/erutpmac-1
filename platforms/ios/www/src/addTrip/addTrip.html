@@ -1,0 +1,92 @@
+<ion-view>
+<ion-content>
+	<div class="trip-title">
+		<img src="assets/img/8.jpeg" class="trip-cover">
+		<div class="row trip-title-action-button ">
+			<div class="col left">
+				<button class="button-icon icon ion-ios-close-empty padding-left" ui-sref="tabs.feed"></button>
+			</div>
+			<div class="col right">
+				<button class="button-icon icon ion-ios-checkmark-empty padding-right" ui-sref="tabs.profile"></button>
+			</div>
+		</div>
+		<div class="row trip-title-input row-center">
+			<button class="button button-block button-light add-cover-image">
+			<i class="ion-ios-camera"></i> 
+			Add Cover Image
+			</button>
+			<div class="col">
+				<input placeholder="Enter trip title" focus-me>
+			</div>
+		</div>
+	</div>
+
+		<label class="item item-input">
+  				<i class="icon ion-edit placeholder-icon"></i>
+  				<textarea type="text" placeholder="Add Description"></textarea>
+		</label>
+		<label class="item item-input">
+  				<i class="icon ion-pricetag placeholder-icon"></i>
+  				<input type="text" placeholder="Tags">
+		</label>
+		
+<!--Added location form!-->
+	<div class="list card">
+  		<div class="item">
+    	<h2>India Gate,New Delhi, India</h2>
+    	<p>November 05, 1955</p>
+  		</div>
+
+  		<div class="item item-body">
+    	<img class="full-image" src="..//assets/img/cover.jpeg">
+    	<p>
+      This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+      the content is from a card-body consisting of an image and paragraph text. The footer
+      consists of tabs, icons aligned left, within the card-footer.
+    	</p>
+    	<button class="button button-small button-stable">
+  Edit
+		</button>
+  		</div>
+
+	</div>
+		
+	
+	<!--Add a location card!-->
+	<div class="list card">
+    	<div class="item item-body">
+    	<img class="full-image" src="..//assets/img/cover.jpeg">
+    	<label class="item item-input">
+  				<i class="icon ion-edit placeholder-icon"></i>
+  				<textarea type="text" placeholder="Add Description"></textarea>
+		</label>
+		
+		<label class="item item-input">
+  				<i class="icon ion-ios-location-outline placeholder-icon"></i>
+  				<input type="text" placeholder="Add Location">
+		</label>
+		
+    	<label class="item item-input">
+  				<i class="icon ion-ios-calendar-outline placeholder-icon"></i>
+  				<input type="date" placeholder="Date">
+		</label>
+		
+		<button class="button button-small button-stable ">
+  Add to Timeline
+		</button>
+	</div>
+  		
+
+	</div>
+<div class="padding">
+  <button class="button button-positive">
+  <i class="ion-plus-round"></i> 
+</button>
+<button class="button button-balanced pull-right">
+  <i class="ion-arrow-right-c"></i> 
+</button>
+</div>
+	
+</ion-content>
+
+</ion-view>

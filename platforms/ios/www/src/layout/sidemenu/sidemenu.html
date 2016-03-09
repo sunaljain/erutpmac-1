@@ -1,0 +1,59 @@
+<ion-side-menus>
+	<ion-side-menu-content>
+		<ion-nav-view name="menuContent" animation="slide-left"></ion-nav-view>
+	</ion-side-menu-content>
+
+	<ion-side-menu side="left">
+	    <ion-content class="campture-side-menu padding">
+			<div class="user-profile row row-center padding" menu-close ui-sref="side-menu.profile">
+				<div class="col col-25 col-center">
+					<img class="circle responsive-img" ng-src="assets/img/user1.png">
+				</div>
+				<div class="col col-center">
+					<span class="h4 title light">Juilliett Harnett</span>
+				</div>
+			</div>
+			<div class="row row-center padding menu-item" menu-close ui-sref="side-menu.feed">
+				<div class="col active">
+					<i class="icon ion-ios-home padding-right"></i> 
+					<span class="padding-left">
+						Explore
+					</span>
+				</div>
+			</div>
+			<div class="row row-center padding menu-item" menu-close>
+				<div class="col">
+					<i class="icon ion-ios-pricetag padding-right"></i> 
+					<span class="padding-left">
+						Tags
+					</span>
+				</div>
+			</div>
+			<div class="row row-center padding menu-item" menu-close>
+				<div class="col">
+					<i class="icon ion-bookmark padding-right"></i> 
+					<span class="padding-left">
+						Saved Trips
+					</span>
+				</div>
+			</div>
+			<div class="row row-center padding menu-item" menu-close>
+				<div class="col">
+					<i class="icon ion-social-rss padding-right"></i> 
+					<span class="padding-left">
+						Blog
+					</span>
+				</div>
+			</div>
+
+			<div class="row row-center padding menu-item" menu-close>
+				<div class="col">
+					<i class="icon ion-gear-b padding-right"></i> 
+					<span class="padding-left">
+						Settings
+					</span>
+				</div>
+			</div>
+	    </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
