@@ -15,9 +15,9 @@
 			<i class="ion-ios-camera"></i> 
 			Add Cover Image
 			</button>
-			<div class="col">
-				<input placeholder="Enter trip title" focus-me>
-			</div>
+			
+				<textarea rows="3" placeholder="Enter trip title" focus-me></textarea>
+			
 		</div>
 	</div>
 
@@ -45,7 +45,7 @@
       consists of tabs, icons aligned left, within the card-footer.
     	</p>
     	<button class="button button-small button-stable">
-  Add To Timeline
+  Edit
 		</button>
   		</div>
 
@@ -54,31 +54,64 @@
 	
 	<!--Add a location card!-->
 	<div class="list card">
-  		
-    	<label class="item item-input">
-  				<i class="icon ion-ios-location-outline placeholder-icon"></i>
-  				<input type="text" placeholder="Add Location">
-		</label>
-    	<label class="item item-input">
-  				<i class="icon ion-ios-calendar-outline placeholder-icon"></i>
-  				<span class="input-label">Date</span>
-  				<input type="date" placeholder="Enter Date">
-		</label>
-  	
-
-  		<div class="item item-body">
+    	<div class="item item-body">
     	<img class="full-image" src="..//assets/img/cover.jpeg">
     	<label class="item item-input">
   				<i class="icon ion-edit placeholder-icon"></i>
   				<textarea type="text" placeholder="Add Description"></textarea>
 		</label>
-		<br>
-    	<button class="button button-small button-stable">
-  Edit
+		
+		<label class="item item-input">
+  				<i class="icon ion-ios-location-outline placeholder-icon"></i>
+  				<input type="text" placeholder="Add Location">
+		</label>
+		
+    	<label class="item item-input">
+  				<i class="icon ion-ios-calendar-outline placeholder-icon"></i>
+  				<input type="date" placeholder="Date">
+		</label>
+		
+		<button class="button button-small button-stable ">
+  Add to Timeline
 		</button>
-  		</div>
+	</div>
+  		
 
 	</div>
+<div class="padding">
+  <button class="button button-positive">
+  <i class="ion-plus-round"></i> 
+</button>
+<button class="button button-balanced pull-right">
+  <i class="ion-arrow-right-c"></i> 
+</button>
+</div>
 	
 </ion-content>
+
+ <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">New Contact</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">First Name</span>
+              <input ng-model="newUser.firstName" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Last Name</span>
+              <input ng-model="newUser.lastName" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input ng-model="newUser.email" type="text">
+            </label>
+            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>
+    </script>
 </ion-view>
