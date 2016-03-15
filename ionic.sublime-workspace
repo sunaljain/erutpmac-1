@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"textarea"
+			],
+			[
 				"font",
 				"font-size"
 			],
@@ -64,6 +68,10 @@
 	},
 	"file_history":
 	[
+		"/Users/seemachowdhary/Desktop/Campture/Campture App/Ionic App/erutpmac/www/assets/css/style.css",
+		"/Users/seemachowdhary/Desktop/Campture/Campture App/Ionic App/erutpmac/www/index.html",
+		"/Users/seemachowdhary/Desktop/Campture/Campture App/Ionic App/erutpmac/www/src/addTrip/addTrip.html",
+		"/Users/seemachowdhary/Desktop/Campture/Campture App/Ionic App/erutpmac/info.txt",
 		"/Users/seemachowdhary/Desktop/Campture/Campture App/Ionic App/ionicV_1/campture-camptureapp-4fe8c87dfcd1/www/index.html",
 		"/Users/seemachowdhary/Desktop/Campture/Campture App/Ionic App/ionicV_1/campture-camptureapp-4fe8c87dfcd1/www/src/feed/feed.html",
 		"/Users/seemachowdhary/Desktop/Campture/Campture App/Ionic App/ionicV_1/campture-camptureapp-4fe8c87dfcd1/www/src/trip/trip.html",

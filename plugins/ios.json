@@ -46,17 +46,7 @@
                             "xml": false,
                             "count": 1
                         }
-                    ],
-                    "ImageIO.framework": [],
-                    "CoreLocation.framework": [],
-                    "AssetsLibrary.framework": [],
-                    "MobileCoreServices.framework": [],
-                    "AVFoundation.framework": []
-                }
-            },
-            "*-Info.plist": {
-                "parents": {
-                    "NSLocationWhenInUseUsageDescription": []
+                    ]
                 }
             }
         }
