@@ -97,18 +97,30 @@
           <h1 class="title">New Location</h1>
         <button class="button button-clear button-primary" ng-click="modal.hide()"><i class="ion-close-round"></i></button>
         </ion-header-bar>
-        <ion-content class="padding">
-        <div class="card">
-          <div class="item item-text-wrap">
-    <span>Trip to Triund</span>
-          </div>
-          </div>
+        <ion-content>
           <div class="card">
           <div class="item item-text-wrap add-location-card">
-    <textarea placeholder="Description"></textarea>
+          <div><i class="icon ion-ios-location-outline placeholder-icon"></i>
+          <span>Gurgaon, India</span>
+          </div>
+    <textarea placeholder="What are you up to?"></textarea>
           </div>
           </div>
+          <hscroller>
+        <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+        <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+        <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+        <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+      </hscroller>
         </ion-content>
+        <ion-footer-bar align-title="left" keyboard-attach class="bar-stable">
+        <div class="button-bar">
+  <a class="button"><i class="ion-ios-location"></i></a>
+  <a class="button"><i class="ion-camera"></i></a>
+  <a class="button">Add</a>
+        </div>
+   
+    </ion-footer-bar>
       </ion-modal-view>
     </script>
 </ion-view>

@@ -50,6 +50,15 @@
 					}
 				}
 			})
+			// .state('tabs.addLocation', {
+			// 	url: '/add_location',
+			// 	views: {
+			// 		'add_location': {
+			// 			templateUrl: 'src/addTrip/addLocation.html',
+			// 			controller: 'addTripCtrl'
+			// 		}
+			// 	}
+			// })
 
 			.state('trip', {
 				url: '/trip',

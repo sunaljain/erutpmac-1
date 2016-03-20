@@ -23,7 +23,14 @@
         <!-- your app's js -->
 
         <script src="src/app.js"></script>
-        <script src="src/app.routes.js"></script>
+        
+        <!-- services -->
+        <script src="src/services/accountService.js"></script>
+        <script src="src/services/tripService.js"></script>
+        <script src="src/services/tourService.js"></script>
+        <script src="src/services/userService.js"></script>
+
+        <!-- controller -->
         <script src="src/layout/headerbar/headerbarCtrl.js"></script>
         <script src="src/login/loginCtrl.js"></script>
         <script src="src/feed/feedCtrl.js"></script>
@@ -35,6 +42,7 @@
         <script src="src/layout/sidemenu/sidemenuCtrl.js"></script>
         <script src="src/layout/tabmenu/tabmenuCtrl.js"></script>
         -->
+        <script src="src/app.routes.js"></script>
     </head>
     <body ng-app="app" class="platform-ios platform-cordova platform-webview">
     <ion-nav-view>
