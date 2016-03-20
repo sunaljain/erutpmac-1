@@ -54,7 +54,7 @@
             try {
                 if (!transString) {
                     transString = 'upload/c_fill,h_440,w_440/';
-                }
+                }	
                 var arr = url.split('upload/');
                 var croppedUrl = arr[0] + transString + arr[1];
             } catch (e) {

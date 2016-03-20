@@ -44,7 +44,7 @@
       the content is from a card-body consisting of an image and paragraph text. The footer
       consists of tabs, icons aligned left, within the card-footer.
     	</p>
-    	<button class="button button-small button-stable">
+    	<button class="button button-small button-stable" >
   Edit
 		</button>
   		</div>
@@ -52,7 +52,7 @@
 	</div>
 		
 	
-	<!--Add a location card!-->
+	<!--Edit location card!-->
 	<div class="list card">
     	<div class="item item-body">
     	<img class="full-image" src="..//assets/img/cover.jpeg">
@@ -79,7 +79,7 @@
 
 	</div>
 <div class="padding">
-  <button class="button button-positive">
+  <button class="button button-positive" ng-click="modal.show()">
   <i class="ion-plus-round"></i> 
 </button>
 <button class="button button-balanced pull-right">
@@ -89,27 +89,24 @@
 	
 </ion-content>
 
+<!--Add a location card!-->
  <script id="templates/modal.html" type="text/ng-template">
       <ion-modal-view>
-        <ion-header-bar class="bar bar-header bar-positive">
-          <h1 class="title">New Contact</h1>
-          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        <ion-header-bar class="bar bar-header bar-light no-border">
+        <button class="button button-clear button-primary" ng-click="modal.hide()"><img src="../../assets/img/user1.png" width="30" height="30" alt=""/></button>
+          <h1 class="title">New Location</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()"><i class="ion-close-round"></i></button>
         </ion-header-bar>
         <ion-content class="padding">
-          <div class="list">
-            <label class="item item-input">
-              <span class="input-label">First Name</span>
-              <input ng-model="newUser.firstName" type="text">
-            </label>
-            <label class="item item-input">
-              <span class="input-label">Last Name</span>
-              <input ng-model="newUser.lastName" type="text">
-            </label>
-            <label class="item item-input">
-              <span class="input-label">Email</span>
-              <input ng-model="newUser.email" type="text">
-            </label>
-            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+        <div class="card">
+          <div class="item item-text-wrap">
+    <span>Trip to Triund</span>
+          </div>
+          </div>
+          <div class="card">
+          <div class="item item-text-wrap add-location-card">
+    <textarea placeholder="Description"></textarea>
+          </div>
           </div>
         </ion-content>
       </ion-modal-view>

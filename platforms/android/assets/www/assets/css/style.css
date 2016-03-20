@@ -282,3 +282,9 @@
 .pull-right{
 	float: right;
 }
+.add-location-card textarea{
+	width: 100%;
+}
+.no-border{
+	border: none;
+}
