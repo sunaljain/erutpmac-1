@@ -11,27 +11,27 @@
 			</div>
 		</div>
 		<div class="row trip-title-input row-center">
-			<button class="button button-block button-light add-cover-image">
+			<button ng-click="getMainImage()" class="button button-block button-light add-cover-image">
 			<i class="ion-ios-camera"></i> 
 			Add Cover Image
 			</button>
 			
-				<textarea rows="3" placeholder="Enter trip title" focus-me></textarea>
+				<textarea ng-model="newTrip.title" rows="3" placeholder="Enter trip title" focus-me></textarea>
 			
 		</div>
 	</div>
 
 		<label class="item item-input">
   				<i class="icon ion-edit placeholder-icon"></i>
-  				<textarea type="text" placeholder="Add Description"></textarea>
+  				<textarea ng-model="newTrip.introduction" type="text" placeholder="Add Description"></textarea>
 		</label>
 		<label class="item item-input">
   				<i class="icon ion-pricetag placeholder-icon"></i>
-  				<input type="text" placeholder="Tags">
+  				<input ng-model="rawTags" ng-blur="formatTags()" type="text" placeholder="Tags">
 		</label>
 		
 <!--Added location form!-->
-	<div class="list card">
+<!-- 	<div class="list card">
   		<div class="item">
     	<h2>India Gate,New Delhi, India</h2>
     	<p>November 05, 1955</p>
@@ -49,11 +49,11 @@
 		</button>
   		</div>
 
-	</div>
+	</div> -->
 		
 	
 	<!--Edit location card!-->
-	<div class="list card">
+	<!-- <div class="list card">
     	<div class="item item-body">
     	<img class="full-image" src="..//assets/img/cover.jpeg">
     	<label class="item item-input">
@@ -74,12 +74,12 @@
 		<button class="button button-small button-stable ">
   Add to Timeline
 		</button>
-	</div>
+	</div> -->
   		
 
 	</div>
 <div class="padding">
-  <button class="button button-positive" ng-click="modal.show()">
+  <button class="button button-positive" ng-click="addNewPlace()">
   <i class="ion-plus-round"></i> 
 </button>
 <button class="button button-balanced pull-right">
@@ -89,13 +89,13 @@
 	
 </ion-content>
 
-<!--Add a location card!-->
- <script id="templates/modal.html" type="text/ng-template">
+<!--Add a location card! hello-->
+  <script id="templates/modal.html" type="text/ng-template">
       <ion-modal-view>
         <ion-header-bar class="bar bar-header bar-light no-border">
-        <button class="button button-clear button-primary" ng-click="modal.hide()"><img src="../../assets/img/user1.png" width="30" height="30" alt=""/></button>
+          <button class="button button-clear button-primary" ng-click="modal.hide()"><img src="../../assets/img/user1.png" width="30" height="30" alt=""/></button>
           <h1 class="title">New Location</h1>
-        <button class="button button-clear button-primary" ng-click="modal.hide()"><i class="ion-close-round"></i></button>
+          <button class="button button-clear button-primary" ng-click="modal.hide()"><i class="ion-close-round"></i></button>
         </ion-header-bar>
         <ion-content>
           <div class="card">
@@ -103,13 +103,40 @@
           <div><i class="icon ion-ios-location-outline placeholder-icon"></i>
           <span>Gurgaon, India</span>
           </div>
-    <textarea placeholder="What are you up to?"></textarea>
+            <textarea ng-model="newPlace.note" placeholder="What are you up to?"></textarea>
+            <input type="date">
           </div>
           </div>
-    <ion-footer-bar align-title="left" keyboard-attach class="bar-assertive">
-   <h1 class="title">Title!</h1>
+          <hscroller>
+            <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+            <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+            <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+            <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+          </hscroller>
+        </ion-content>
+        <ion-footer-bar align-title="left" keyboard-attach class="bar-stable">
+        <div class="button-bar">
+          <a class="button" ng-click="locationModal.show()"><i class="ion-ios-location"></i></a>
+          <a class="button"><i class="ion-camera"></i></a>
+          <a class="button">Add</a>
+        </div>   
     </ion-footer-bar>
+      </ion-modal-view>
+  </script>
+  <script id="templates/locationModal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-light no-border">          
+          <h1 class="title">New Location</h1>
+          <button class="button button-clear button-primary" ng-click="locationModal.hide()"><i class="ion-close-round"></i></button>
+        </ion-header-bar>
+        <ion-content>
+          <div class="card">
+            <div class="item item-text-wrap add-location-card">
+              <ion-google-place placeholder="Enter Location" ng-model="placeLocation" location-changed="locationChanged"/>              
+            </div>
+            <button class="button-icon icon ion-ios-checkmark-empty padding-right" ng-click="locationModal.hide();addLocation()"></button>
+          </div>
         </ion-content>
       </ion-modal-view>
-    </script>
+  </script>
 </ion-view>
