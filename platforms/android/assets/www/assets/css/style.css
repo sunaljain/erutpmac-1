@@ -3,8 +3,8 @@
 	background-size: contain;background-position: center;
 	background-blend-mode: darken;
 }
-.slider {
-	height: 78%;
+.slider {/*78*/
+	height: 100%; 
 	/*border-bottom: 1px solid;*/
 }
 .slider-pager .slider-pager-page{
@@ -281,4 +281,10 @@
 }
 .pull-right{
 	float: right;
+}
+.add-location-card textarea{
+	width: 100%;
+}
+.no-border{
+	border: none;
 }

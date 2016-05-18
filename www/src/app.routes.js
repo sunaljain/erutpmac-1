@@ -61,7 +61,7 @@
 			// })
 
 			.state('trip', {
-				url: '/trip',
+				url: '/trip/:tripId',
 				templateUrl: 'src/trip/trip.html',
 				controller: 'tripCtrl'
 			});

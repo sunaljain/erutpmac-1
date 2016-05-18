@@ -1,190 +1,29 @@
 <ion-view hide-nav-bar="true">
 	<campture-header-bar title="{{title}}"></campture-header-bar>
 	<ion-content class="has-header">
-		<div class="campture-trip" ui-sref="trip">
-			<img src="assets/img/1.jpg" class="trip-cover">
+		<div class="campture-trip" ui-sref="trip({tripId: trip.id})" ng-repeat="trip in allTrips">
+			<img ng-src="{{trip.cropped_image_url}}" class="trip-cover">
 			<div class="row trip-metadata row-center">
 				<div class="col col-center">
-					<p>7h ago</p>
-					<h4 class="light">My Euro Trip</h4>
-					<p>Zermatt, Switzerland</p>
+					<p>{{trip.visited_places[0].date | date:"dd/MM/yyyy"}}</p>
+					<h4 class="light">{{trip.title}}</h4>
+					<p>{{trip.visited_places[0].location}}</p>
 				</div>
 			</div>
 			<div class="row trip-publisher padding">
 				<div class="col">
 					<div class="row row-center">
 						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
+							<img class="circle responsive-img" ng-src="{{trip.user.facebook_profile.picture.data.url}}">
 						</div>
-						<div class="col col-center">Hello Harnett</div>
+						<div class="col col-center">{{trip.username}}</div>
 					</div>
 				</div>
 				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
+					<i class="icon ion-ios-heart"></i>{{trip.total_likes}}
 				</div>
 			</div>
-		</div>
-		<div class="campture-trip" ui-sref="trip">
-			<img src="assets/img/2.jpg" class="trip-cover">
-			<div class="row row-center trip-metadata">
-				<div class="col col-center">
-					<p>2d ago</p>
-					<h4 class="light">Swiss Trek</h4>
-					<p>Venice, Italy</p>
-				</div>
-			</div>
-			<div class="row trip-publisher padding">
-				<div class="col">
-					<div class="row row-center">
-						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
-						</div>
-						<div class="col col-center">Juilliett Harnett</div>
-					</div>
-				</div>
-				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
-				</div>
-			</div>
-		</div>
-		<div class="campture-trip" ui-sref="trip">
-			<img src="assets/img/3.jpg" class="trip-cover">
-			<div class="row row-center trip-metadata">
-				<div class="col col-center">
-					<p>4d ago</p>
-					<h4 class="light">French Connection</h4>
-					<p>Paris, French</p>
-				</div>
-			</div>
-			<div class="row trip-publisher padding">
-				<div class="col">
-					<div class="row row-center">
-						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
-						</div>
-						<div class="col col-center">Juilliett Harnett</div>
-					</div>
-				</div>
-				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
-				</div>
-			</div>
-		</div>
-		<div class="campture-trip">
-			<img src="assets/img/4.jpeg" class="trip-cover">
-			<div class="row row-center trip-metadata">
-				<div class="col col-center">
-					<p>3w ago</p>
-					<h4 class="light">Tokyo Trip</h4>
-					<p>Tokyo, Japan</p>
-				</div>
-			</div>
-			<div class="row trip-publisher padding">
-				<div class="col">
-					<div class="row row-center">
-						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
-						</div>
-						<div class="col col-center">Juilliett Harnett</div>
-					</div>
-				</div>
-				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
-				</div>
-			</div>
-		</div>
-		<div class="campture-trip">
-			<img src="assets/img/5.jpeg" class="trip-cover">
-			<div class="row row-center trip-metadata">
-				<div class="col col-center">
-					<p>4w ago</p>
-					<h4 class="light">Hokiado Adventure</h4>
-					<p>Hokaido, Japan</p>
-				</div>
-			</div>
-			<div class="row trip-publisher padding">
-				<div class="col">
-					<div class="row row-center">
-						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
-						</div>
-						<div class="col col-center">Juilliett Harnett</div>
-					</div>
-				</div>
-				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
-				</div>
-			</div>
-		</div>
-		<div class="campture-trip">
-			<img src="assets/img/6.jpeg" class="trip-cover">
-			<div class="row row-center trip-metadata">
-				<div class="col col-center">
-					<p>4w ago</p>
-					<h4 class="light">Hokiado Adventure</h4>
-					<p>Hokaido, Japan</p>
-				</div>
-			</div>
-			<div class="row trip-publisher padding">
-				<div class="col">
-					<div class="row row-center">
-						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
-						</div>
-						<div class="col col-center">Juilliett Harnett</div>
-					</div>
-				</div>
-				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
-				</div>
-			</div>
-		</div>
-		<div class="campture-trip">
-			<img src="assets/img/7.jpeg" class="trip-cover">
-			<div class="row row-center trip-metadata">
-				<div class="col col-center">
-					<p>4w ago</p>
-					<h4 class="light">Hokiado Adventure</h4>
-					<p>Hokaido, Japan</p>
-				</div>
-			</div>
-			<div class="row trip-publisher padding">
-				<div class="col">
-					<div class="row row-center">
-						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
-						</div>
-						<div class="col col-center">Juilliett Harnett</div>
-					</div>
-				</div>
-				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
-				</div>
-			</div>
-		</div>
-		<div class="campture-trip">
-			<img src="assets/img/8.jpeg" class="trip-cover">
-			<div class="row row-center trip-metadata">
-				<div class="col col-center">
-					<p>4w ago</p>
-					<h4 class="light">Hokiado Adventure</h4>
-					<p>Hokaido, Japan</p>
-				</div>
-			</div>
-			<div class="row trip-publisher padding">
-				<div class="col">
-					<div class="row row-center">
-						<div class="col-15 col-center">
-							<img class="circle responsive-img" ng-src="assets/img/user1.png">
-						</div>
-						<div class="col col-center">Juilliett Harnett</div>
-					</div>
-				</div>
-				<div class="col col-center trip-like-count">
-					<i class="icon ion-ios-heart"></i> 24
-				</div>
-			</div>
-		</div>
+		</div>	
 		
 	</ion-content>
 	<!-- <button class="button icon ion-edit add-trip-button"></button> -->

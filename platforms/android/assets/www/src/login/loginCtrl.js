@@ -3,16 +3,45 @@
 
 	angular
 		.module('app.login', [])
-		.controller('loginCtrl', loginCtrl);
+		.controller('loginCtrl',['$scope', '$state', 'AccountService', loginCtrl]);
 
-	function loginCtrl($scope, $state) {
+	function loginCtrl($scope, $state,accountService) {
 		/* jshint validthis: true */
-		var vm = this;
+		var vm = $scope;
 
 		vm.title = "Welcome";
 		$scope.login = login;
 		$scope.skip = skip;
+		$scope.loginWithFacebook = loginWithFacebook;
 
+
+		function loginWithFacebook () {			
+            Parse.FacebookUtils.logIn(null, {
+                success: function (user) {
+                    if (!user.existed()) {
+                        accountService.getMyProfile().then(function (response) {
+                            accountService.updateUserFacebookProfile(response, user.id, function (data) {
+                                $scope.$apply(function () {
+                                    if (data) {
+                                        var x = data;
+                                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
+                                        // $localStorage.currentUser = response;
+                                    }
+                                });
+                            });
+                        });
+                    }
+                    else {
+                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
+                        $scope.$apply();
+                    }
+                    $state.go("tabs.feed");
+                },
+                error: function (user, error) {
+                    console.log("Cancelled");
+                }
+            });
+        };
 		function login(){
 			console.log("logged in!!");
 			$state.go("tabs.feed");

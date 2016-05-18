@@ -3,11 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src  &apos;self&apos; &apos;unsafe-inline&apos; *">
         <title></title>
 
         <link href="lib/ionic/css/ionic.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Ion: Horizontal Scroll Cards -->
+        <link href="assets/css/hscrollcards.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="lib/ion-google-place/ion-google-place.css">
 
 
         <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -16,7 +20,25 @@
 
         <!-- ionic/angularjs js -->
         <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <!-- Parse -->
         <script src="assets/js/parse-1.6.14.min.js"></script>
+        <!-- map dependencies -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&amp;sensor=false"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+        
+         <!-- ngCordova -->
+        <!-- IMPORTANT : SHOULD be after ionic bundle and before cordova.js -->
+        <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+        <!-- angular dependencies -->
+        <script src="assets/js/angular-cookies.js"></script>
+        <script src="assets/js/ngAutocomplete.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+        <!-- Ion: Horizontal Scroll Cards -->
+        <script src="assets/js/ionic.hscrollcards.min.js"></script>
+        <!-- ion google place -->
+        <script src="lib/ion-google-place/ion-google-place.js"></script>
+        
         <!-- cordova script (this will be a 404 during development) -->
         <script src="cordova.js"></script>
 
@@ -41,7 +63,8 @@
         <script src="src/login/loginCtrl.js"></script>
         <script src="src/layout/sidemenu/sidemenuCtrl.js"></script>
         <script src="src/layout/tabmenu/tabmenuCtrl.js"></script>
-        -->
+        -->        
+        <!-- App Routes -->
         <script src="src/app.routes.js"></script>
     </head>
     <body ng-app="app">

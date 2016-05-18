@@ -3,8 +3,8 @@
 	background-size: contain;background-position: center;
 	background-blend-mode: darken;
 }
-.slider {
-	height: 78%;
+.slider {/*78*/
+	height: 100%; 
 	/*border-bottom: 1px solid;*/
 }
 .slider-pager .slider-pager-page{
@@ -220,7 +220,7 @@
 	color: #fff;
 }
 .trip-title img.trip-cover{
-	width: 100%;
+	width: 100vw;
 }
 .trip-title .trip-title-input{
 	position: absolute;
@@ -228,19 +228,26 @@
 	text-align: center;
 	height: 60%
 }
-.trip-title .trip-title-input input{
+.trip-title .trip-title-input textarea{
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
 	text-align: center;
-	font-size: 1.8rem;
+	font-size: 25px;
+	line-height: 20px;
 	font-weight: bold;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #fff;
 	border-style: none;
-
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
 }
-.trip-title .trip-title-input input::-webkit-input-placeholder { 
+.trip-title .trip-title-input textarea::-webkit-input-placeholder { 
   color: #fafafa;
   font-weight: bold;
+  font-size: 20px;
 }
 .trip-title-action-button {
 	position: absolute;
@@ -274,4 +281,10 @@
 }
 .pull-right{
 	float: right;
+}
+.add-location-card textarea{
+	width: 100%;
+}
+.no-border{
+	border: none;
 }
